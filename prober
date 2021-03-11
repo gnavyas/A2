@@ -1,0 +1,20 @@
+#!/usr/bin/python
+
+import sys,time
+import easysnmp
+import math
+from easysnmp import Session
+from easysnmp import snmp_get,snmp_walk
+
+
+details_of_agent=sys.argv[1]
+info_agent=details_of_agent.split(':')
+adress_ip=info_agent[0]
+det_agent_port=info_agent[1]
+commu_agent=info_agent[2]
+num_frquency_samples=float(sys.argv[2])
+samples=int(sys.argv[3])
+total_sam_time=1/num_frquency_samples 
+my_oids=[]
+get_oid=[]
+push_oid=[]
