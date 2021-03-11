@@ -53,3 +53,23 @@ def nprober():
 
 	get_oid=push_oid
 	get_time=b_time
+	
+
+
+if samples==-1:
+	count=0
+	get_oid=[]
+	while True:
+		b_time=(time.time())
+		nprober()
+		response_time=(time.time())
+		count = count+1
+		time.sleep(abs(total_sam_time - response_time + b_time))
+else:
+	get_oid=[]
+	for count in range(0,samples+1):
+		b_time=(time.time())
+		nprober()
+		response_time=(time.time())
+		time.sleep(abs(total_sam_time - response_time + b_time))
+		
