@@ -50,3 +50,6 @@ def nprober():
 						print(str(b_time) +"|"+ str(oid_gap / time_difference) +"|")
 				else:
 					print(str(b_time) +"|"+ str(rate) +"|")
+
+	get_oid=push_oid
+	get_time=b_time
